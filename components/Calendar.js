@@ -294,7 +294,10 @@ export default class Calendar extends Component {
     : (
       <View style={[styles.calendarControls, this.props.customStyle.calendarControls]}>
         <Text style={[styles.title, this.props.customStyle.title]}>
-          {this.state.currentMonthMoment.format(this.props.titleFormat)}
+          {
+            /*this.state.currentMonthMoment.format(this.props.titleFormat)*/
+            localizedMonth + '  ' + this.state.currentMonthMoment.format('YYYY')
+          }
         </Text>
       </View>
     );
